@@ -1,8 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { randomUUID } from 'crypto';
-import { ChargeRequest, ChargeResult, PaymentProvider } from './payment-provider.interface';
+import {
+  ChargeRequest,
+  ChargeResult,
+  PaymentProvider,
+} from './payment-provider.interface';
 
-/** Simulates a gateway. Succeeds unless `simulate: 'FAILED'` is requested. */
 @Injectable()
 export class MockPaymentProvider implements PaymentProvider {
   readonly name = 'MOCK';

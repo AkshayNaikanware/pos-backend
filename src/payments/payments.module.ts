@@ -5,7 +5,6 @@ import { PaymentsService } from './payments.service';
 
 @Module({
   providers: [
-    // Swap useClass for a real gateway implementation; nothing else changes.
     { provide: PAYMENT_PROVIDER, useClass: MockPaymentProvider },
     PaymentsService,
   ],
