@@ -23,7 +23,8 @@
     "migration:run": "ts-node src/database/run-migrations.ts",
     "migration:revert": "npm run typeorm -- migration:revert",
     "seed": "ts-node src/database/seed.ts",
-    "db:setup": "npm run migration:run && npm run seed"
+    "db:setup": "npm run migration:run && npm run seed",
+    "db:reset": "ts-node src/database/reset.ts && npm run db:setup"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
